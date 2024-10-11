@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import routes from "./routes";
-import { PluginManifest } from "@/pluginMap";
+import { PluginManifest } from "@/pluginTypes";
 
 const manifest: PluginManifest = {
   plugin: "care-livekit",

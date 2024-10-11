@@ -5,7 +5,7 @@ import CareIcon from "@core/CAREUI/icons/CareIcon";
 import { triggerGoal } from "@core/Integrations/Plausible";
 import useAuthUser from "@core/Common/hooks/useAuthUser";
 
-import { DoctorConnectButtonComponentType } from "@core/pluginMap";
+import { DoctorConnectButtonComponentType } from "@/pluginTypes";
 
 const DoctorConnectButtons: DoctorConnectButtonComponentType = ({ user }) => {
   const authUser = useAuthUser();
