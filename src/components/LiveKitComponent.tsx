@@ -16,13 +16,12 @@ import {
 } from "@livekit/components-react";
 import { Track } from "livekit-client";
 
-const serverUrl = "wss://care-22km03y2.livekit.cloud";
-
 export default function LiveKitComponent(props: {
   sourceUsername: string;
   targetUsername: string;
 }) {
   const [token, setToken] = useState("");
+  const [serverUrl, setServerUrl] = useState("");
 
   const getToken = async () => {
     const { res, data } = await request(routes.livekit.create_room, {
@@ -34,6 +33,7 @@ export default function LiveKitComponent(props: {
 
     if (res?.status === 201 && data) {
       setToken(data.access);
+      setServerUrl(data.url);
     }
   };
 
@@ -50,7 +50,7 @@ export default function LiveKitComponent(props: {
           </div>
         }
       >
-        {token && <Livekit serverUrl={serverUrl} token={token} />}
+        {token && serverUrl && <Livekit serverUrl={serverUrl} token={token} />}
       </ErrorBoundary>
     </div>
   );

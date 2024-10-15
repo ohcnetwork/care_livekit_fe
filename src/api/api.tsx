@@ -8,6 +8,7 @@ export interface LiveKitTokenRequest {
 export interface LiveKitTokenResponse {
   access: string;
   room_code: string;
+  url: string;
 }
 
 const routes = {
