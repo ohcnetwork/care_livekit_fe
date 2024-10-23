@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import request from "@core/Utils/request/request";
 import routes from "../api/api";
-import ErrorBoundary from "@core/Components/Common/ErrorBoundary";
+import ErrorBoundary from "@core/components/Common/ErrorBoundary";
 
 import {
   ControlBar,
@@ -91,7 +91,7 @@ function MyVideoConference() {
       { source: Track.Source.Camera, withPlaceholder: true },
       { source: Track.Source.ScreenShare, withPlaceholder: false },
     ],
-    { onlySubscribed: false },
+    { onlySubscribed: false }
   );
   return (
     <GridLayout

@@ -1,9 +1,9 @@
 import React from "react";
 
 import LiveKitComponent from "./LiveKitComponent";
-import { useAuthContext } from "@core/Common/hooks/useAuthUser";
+import { useAuthContext } from "@core/common/hooks/useAuthUser";
 
-const PageTitle = React.lazy(() => import("@core/Components/Common/PageTitle"));
+const PageTitle = React.lazy(() => import("@core/components/Common/PageTitle"));
 
 const DoctorLiveConnect = ({ username }: { username: string }) => {
   const { user: currentUser } = useAuthContext();
