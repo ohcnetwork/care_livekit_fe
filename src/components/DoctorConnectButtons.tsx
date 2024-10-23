@@ -3,7 +3,7 @@ import { navigate } from "raviger";
 
 import CareIcon from "@core/CAREUI/icons/CareIcon";
 import { triggerGoal } from "@core/Integrations/Plausible";
-import useAuthUser from "@core/Common/hooks/useAuthUser";
+import useAuthUser from "@core/common/hooks/useAuthUser";
 
 import { DoctorConnectButtonComponentType } from "@/pluginTypes";
 
